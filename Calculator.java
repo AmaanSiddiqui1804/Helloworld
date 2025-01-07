@@ -8,10 +8,10 @@ public class Calculator{
    System.out.print("Enter second number: "); 
    int b = sc.nextInt();
    System.out.println("Enter name of Operation:" );
-   System.out.println("add || subtract || multiply");
+   System.out.println("add || subtract || multiply || division");
    String op = sc.next();
    
-   int sum, dif, mul ;
+   int sum, dif, mul;
 
    if ("add".equalsIgnoreCase(op)) {
       
@@ -30,6 +30,16 @@ public class Calculator{
          mul = a*b;
          System.out.println("Product of the given numbers is: " + mul);
    }
+   else if ("division".equalsIgnoreCase(op)) {
+         if(b==0){
+         System.out.println("Cannot divide by zero");
+         }
+         else{
+         double div = (double) a / b;
+         System.out.println("Division of the given numbers results in: " + div);
+         }
+   }
+
 
    else{
         System.out.println("Error! Try again");
