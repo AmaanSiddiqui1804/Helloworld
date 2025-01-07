@@ -8,10 +8,10 @@ public class Calculator{
    System.out.print("Enter second number: "); 
    int b = sc.nextInt();
    System.out.println("Enter name of Operation:" );
-   System.out.println("add || subtract ");
+   System.out.println("add || subtract || multiply");
    String op = sc.next();
    
-   int sum, dif ;
+   int sum, dif, mul ;
 
    if ("add".equalsIgnoreCase(op)) {
       
@@ -25,7 +25,12 @@ public class Calculator{
          System.out.println("Difference of the given numbers is: " + dif);
    }
    
-   
+   else if ("multiply".equalsIgnoreCase(op)) {
+      
+         mul = a*b;
+         System.out.println("Product of the given numbers is: " + mul);
+   }
+
    else{
         System.out.println("Error! Try again");
    }
